@@ -1,4 +1,6 @@
-﻿namespace CustomLogger;
+﻿using CustomLogger.Logging;
+
+namespace CustomLogger;
 
 class Program
 {

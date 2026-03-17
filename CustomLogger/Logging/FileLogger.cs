@@ -1,6 +1,6 @@
 ﻿using System.Text;
 
-namespace CustomLogger;
+namespace CustomLogger.Logging;
 
 public class FileLogger : ILoggerItem
 {

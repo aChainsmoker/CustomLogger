@@ -1,4 +1,4 @@
-﻿namespace CustomLogger;
+﻿namespace CustomLogger.Logging;
 
 public interface ILogFormatter
 {
