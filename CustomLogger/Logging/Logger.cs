@@ -2,7 +2,7 @@
 
 public class Logger : ILogger
 {
-    private readonly List<ILoggerItem> _loggers;
+    private readonly List<ILoggerDestination> _loggers;
     private readonly LogFormatter _formatter;
 
     public Logger()
@@ -10,20 +10,20 @@ public class Logger : ILogger
         _loggers = [new ConsoleLogger()];
         _formatter = new LogFormatter();
     }
-    public Logger(List<ILoggerItem> loggers)
+    public Logger(List<ILoggerDestination> loggers)
     {
         _loggers = loggers;
         _formatter = new LogFormatter();
     }
 
-    public void AddLoggerItem(ILoggerItem item)
+    public void AddLoggerItem(ILoggerDestination destination)
     {
-        _loggers.Add(item);
+        _loggers.Add(destination);
     }
 
-    public void RemoveLoggerItem(ILoggerItem item)
+    public void RemoveLoggerItem(ILoggerDestination destination)
     {
-        _loggers.Remove(item);
+        _loggers.Remove(destination);
     }
     
     public void Error(string message)

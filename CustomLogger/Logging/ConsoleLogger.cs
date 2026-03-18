@@ -1,6 +1,6 @@
 ﻿namespace CustomLogger.Logging;
 
-public class ConsoleLogger : ILoggerItem
+public class ConsoleLogger : ILoggerDestination
 {
     public void Log( string message)
     {

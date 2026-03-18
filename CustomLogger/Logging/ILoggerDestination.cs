@@ -1,6 +1,6 @@
 ﻿namespace CustomLogger.Logging;
 
-public interface ILoggerItem
+public interface ILoggerDestination
 {
     void Log(string message);
 }

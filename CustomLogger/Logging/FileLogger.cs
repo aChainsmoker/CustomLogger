@@ -2,7 +2,7 @@
 
 namespace CustomLogger.Logging;
 
-public class FileLogger : ILoggerItem
+public class FileLogger : ILoggerDestination
 {
     private readonly string _filePath;
 
