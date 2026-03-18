@@ -5,7 +5,7 @@ namespace CustomLogger.Logging;
 public class FileLogger : ILoggerDestination
 {
     private readonly string _filePath;
-    public LogLevel? LoggingLevel { get; set; }
+    public LogLevel? LoggingLevel { get; init; }
     
     public FileLogger(string filePath)
     {

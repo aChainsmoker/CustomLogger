@@ -2,7 +2,7 @@
 
 public class ConsoleLogger : ILoggerDestination
 {
-    public LogLevel? LoggingLevel { get; set; }
+    public LogLevel? LoggingLevel { get; init; }
 
     public ConsoleLogger()
     {

@@ -2,6 +2,6 @@
 
 public interface ILoggerDestination
 {
-    LogLevel? LoggingLevel { get; set; }
+    LogLevel? LoggingLevel { get; init; }
     void Log(string message);
 }
