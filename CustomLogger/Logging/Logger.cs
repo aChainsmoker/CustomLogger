@@ -50,6 +50,8 @@ public class Logger : ILogger
     {
         foreach (var logger in _loggers)
         {
+            if(logger.LoggingLevel != null && level > logger.LoggingLevel)
+                continue;
             logger.Log(_formatter.FormatLog(level, message, ex));
         }
     }

@@ -5,11 +5,19 @@ namespace CustomLogger.Logging;
 public class FileLogger : ILoggerDestination
 {
     private readonly string _filePath;
-
+    public LogLevel? LoggingLevel { get; set; }
+    
     public FileLogger(string filePath)
     {
         _filePath = filePath;
     }
+    
+    public FileLogger(string filePath, LogLevel level)
+    {
+        _filePath = filePath;
+        LoggingLevel = level;
+    }
+
     public void Log(string message)
     {
         using var fs = new FileStream(_filePath, FileMode.Append, FileAccess.Write, FileShare.ReadWrite);
