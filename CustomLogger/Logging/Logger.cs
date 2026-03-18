@@ -4,6 +4,12 @@ public class Logger : ILogger
 {
     private readonly List<ILoggerItem> _loggers;
     private readonly LogFormatter _formatter;
+
+    public Logger()
+    {
+        _loggers = [new ConsoleLogger()];
+        _formatter = new LogFormatter();
+    }
     public Logger(List<ILoggerItem> loggers)
     {
         _loggers = loggers;
