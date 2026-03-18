@@ -12,9 +12,8 @@ public class FileLogger : ILoggerDestination
         _filePath = filePath;
     }
     
-    public FileLogger(string filePath, LogLevel level)
+    public FileLogger(string filePath, LogLevel level) : this(filePath)
     {
-        _filePath = filePath;
         LoggingLevel = level;
     }
 
